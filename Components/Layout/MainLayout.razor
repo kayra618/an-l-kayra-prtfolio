@@ -1,0 +1,34 @@
+@inherits LayoutComponentBase
+
+<div class="main-layout-wrapper page-enter">
+    <NavMenu />
+
+    <main>
+        <article class="content">
+            @Body
+        </article>
+    </main>
+
+    <footer class="text-center py-5 mt-5" style="border-top: 1px solid rgba(255,255,255,0.05)">
+        <p class="text-muted">© @DateTime.Now.Year <span class="neon-text">Anıl Kayra Cengiz</span>. Tüm Hakları Saklıdır.</p>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="#" class="text-muted hover-neon"><i class="bi bi-github"></i></a>
+            <a href="#" class="text-muted hover-neon"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="text-muted hover-neon"><i class="bi bi-discord"></i></a>
+        </div>
+    </footer>
+</div>
+
+<div id="blazor-error-ui" data-nosnippet>
+    Bir hata oluştu.
+    <a href="." class="reload">Yenile</a>
+    <span class="dismiss">🗙</span>
+</div>
+
+<style>
+    .hover-neon:hover {
+        color: var(--neon-purple) !important;
+        text-shadow: 0 0 10px var(--neon-purple-glow);
+        transition: all 0.3s ease;
+    }
+</style>

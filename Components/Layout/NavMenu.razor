@@ -1,0 +1,66 @@
+<nav class="navbar navbar-expand-lg sticky-top glass-card mx-2 my-1" style="border-radius: 20px; border-bottom: 2px solid var(--neon-purple-glow); padding: 0.8rem 2rem;">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold neon-text" href="">
+            <i class="bi bi-code-square me-2"></i>AKC.DEV
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto gap-2">
+                <li class="nav-item">
+                    <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                        <i class="bi bi-house-door me-1"></i> Ana Sayfa
+                    </NavLink>
+                </li>
+                <li class="nav-item">
+                    <NavLink class="nav-link" href="hakkimda">
+                        <i class="bi bi-person me-1"></i> Hakkımda
+                    </NavLink>
+                </li>
+                <li class="nav-item">
+                    <NavLink class="nav-link" href="sistem">
+                        <i class="bi bi-pc-display me-1"></i> Sistem
+                    </NavLink>
+                </li>
+                <li class="nav-item">
+                    <NavLink class="nav-link" href="projeler">
+                        <i class="bi bi-rocket-takeoff me-1"></i> Projeler
+                    </NavLink>
+                </li>
+
+                 <li class="nav-item">
+                    <NavLink class="nav-link" href="iletisim">
+                        <i class="bi bi-envelope me-1"></i> İletişim
+                    </NavLink>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<style>
+    .navbar {
+        background: rgba(15, 15, 18, 0.85) !important;
+        backdrop-filter: blur(15px);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    }
+    
+    .navbar-toggler {
+        border-color: var(--neon-purple);
+    }
+    
+    .navbar-toggler-icon {
+        filter: invert(44%) sepia(85%) saturate(1210%) hue-rotate(240deg) brightness(98%) contrast(94%);
+    }
+
+    .nav-link {
+        font-size: 0.95rem;
+        border-radius: 10px;
+        transition: background 0.3s ease;
+    }
+
+    .nav-link:hover {
+        background: rgba(168, 85, 247, 0.1);
+    }
+</style>

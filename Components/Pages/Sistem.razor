@@ -1,0 +1,62 @@
+@page "/sistem"
+@using aasdqawdawfaefgaef.Services
+@inject IDataService DataService
+
+<PageTitle>Sistem Özellikleri | Anıl Kayra Cengiz</PageTitle>
+
+<section class="main-wrapper page-enter">
+    <h2 class="section-title">Sistem Özellikleri</h2>
+    <p class="text-muted mb-5">Geliştirme ve oyun deneyimlerimi paylaştığım setup detaylarım.</p>
+    
+    <div class="row g-4">
+        @foreach (var spec in DataService.GetSystemSpecs())
+        {
+            <div class="col-md-6 col-lg-3">
+                <div class="glass-card text-center p-5 h-100">
+                    <div class="spec-icon-box mx-auto mb-4">
+                        <i class="@spec.Icon fs-1 neon-text"></i>
+                    </div>
+                    <span class="text-muted d-block mb-1 text-uppercase fw-bold" style="font-size: 0.75rem; letter-spacing: 2px;">@spec.Category</span>
+                    <h4 class="fw-bold">@spec.Name</h4>
+                </div>
+            </div>
+        }
+    </div>
+    
+    <div class="mt-5 glass-card">
+        <h4 class="mb-3 neon-text"><i class="bi bi-gear-fill me-2"></i>Diğer Bileşenler</h4>
+        <div class="row">
+            <div class="col-md-6">
+                <ul class="list-unstyled text-muted">
+                    <li class="mb-2"><i class="bi bi-chevron-right me-2 neon-text"></i>Kasa: Deepcool CC560</li>
+                    <li class="mb-2"><i class="bi bi-chevron-right me-2 neon-text"></i>Soğutma: Deepcool LE500 Maars</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                 <ul class="list-unstyled text-muted">
+                    <li class="mb-2"><i class="bi bi-chevron-right me-2 neon-text"></i>Monitör: ViewSonic 240Hz 1ms</li>
+                    <li class="mb-2"><i class="bi bi-chevron-right me-2 neon-text"></i>Ekipmanlar: Mekanik Klavye & Wireless Mouse</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .spec-icon-box {
+        width: 80px;
+        height: 80px;
+        background: rgba(168, 85, 247, 0.05);
+        border: 1px solid var(--neon-purple-glow);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+    
+    .glass-card:hover .spec-icon-box {
+        background: var(--neon-purple-glow);
+        transform: rotate(10deg);
+    }
+</style>

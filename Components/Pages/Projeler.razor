@@ -1,0 +1,63 @@
+@page "/projeler"
+@using aasdqawdawfaefgaef.Services
+@inject IDataService DataService
+
+<PageTitle>Projelerim | Anıl Kayra Cengiz</PageTitle>
+
+<section class="main-wrapper page-enter">
+    <h2 class="section-title">Projelerim</h2>
+    <p class="text-muted mb-5">Şimdiye kadar geliştirdiğim açık kaynaklı veya kişisel çalışmalarım.</p>
+    
+    <div class="project-grid">
+        @foreach (var project in DataService.GetProjects())
+        {
+            <div class="glass-card d-flex flex-column">
+                <div class="project-img-placeholder mb-4">
+                    <i class="bi bi-code-square fs-1 neon-text"></i>
+                </div>
+                <h4 class="mb-2">@project.Title</h4>
+                <p class="text-muted flex-grow-1">@project.Description</p>
+                
+                <div class="mt-3">
+                    @foreach (var tech in project.Technologies)
+                    {
+                        <span class="tech-badge">@tech</span>
+                    }
+                </div>
+                
+                <div class="mt-4 pt-3 d-flex gap-3 border-top" style="border-color: rgba(255,255,255,0.05) !important;">
+                    @if (!string.IsNullOrEmpty(project.GithubUrl))
+                    {
+                        <a href="@project.GithubUrl" target="_blank" class="text-white text-decoration-none hover-neon">
+                            <i class="bi bi-github me-1"></i> Github
+                        </a>
+                    }
+                    @if (!string.IsNullOrEmpty(project.LiveUrl))
+                    {
+                        <a href="@project.LiveUrl" target="_blank" class="text-white text-decoration-none hover-neon">
+                            <i class="bi bi-box-arrow-up-right me-1"></i> Canlı İzle
+                        </a>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+</section>
+
+<style>
+    .project-img-placeholder {
+        height: 180px;
+        background: rgba(168, 85, 247, 0.05);
+        border: 1px dashed var(--neon-purple-glow);
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+    
+    .glass-card:hover .project-img-placeholder {
+        border-style: solid;
+        background: rgba(168, 85, 247, 0.1);
+    }
+</style>

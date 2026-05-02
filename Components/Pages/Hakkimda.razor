@@ -1,0 +1,97 @@
+@page "/hakkimda"
+
+<PageTitle>Hakkımda | Anıl Kayra Cengiz</PageTitle>
+
+<section class="main-wrapper page-enter">
+    <h2 class="section-title">Hakkımda</h2>
+    
+    <div class="row items-center">
+        <div class="col-lg-7">
+            <h3 class="neon-text mb-3">Merhaba, ben Anıl Kayra Cengiz.</h3>
+            <p class="fs-5">
+                Şu an <span class="text-white fw-bold">11. sınıfa</span> geçmek üzere olan 16 yaşında bir lise öğrencisiyim. 
+                Yazılım dünyasına olan merakım her geçen gün büyüyor ve kendimi sürekli bu alanda geliştiriyorum.
+            </p>
+            <div class="mt-4 p-4 glass-card text-center mb-4" style="border: 2px solid var(--neon-purple); background: linear-gradient(145deg, rgba(168,85,247,0.1) 0%, rgba(15,15,18,0.8) 100%); box-shadow: 0 0 15px var(--neon-purple-glow); transform: scale(1.02);">
+                <div class="d-flex justify-content-center align-items-center mb-2">
+                    <i class="bi bi-globe2 fs-2 neon-text me-3"></i>
+                    <p class="fs-3 mb-0 fw-bold">İngilizcem <span class="text-white" style="text-shadow: 0 0 10px #fff;">C1 Seviyesinde</span></p>
+                </div>
+                <p class="text-light mt-3 mb-0 fs-5" style="letter-spacing: 0.5px;">Bu sayede global kaynakları takip edebiliyor ve yeni nesil teknolojileri ilk elden öğrenebiliyorum.</p>
+            </div>
+            
+            <div class="mt-5">
+                <h4 class="mb-4 d-flex align-items-center"><i class="bi bi-stars me-2 neon-text"></i>Yeteneklerim</h4>
+                <div class="skills-grid">
+                    <div class="skill-item">Python</div>
+                    <div class="skill-item">C#</div>
+                    <div class="skill-item">.NET / ASP.NET</div>
+                    <div class="skill-item">SQL / Databases</div>
+                    <div class="skill-item">HTML / CSS</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-5 text-center">
+            <div class="avatar-container glow-on-hover">
+                <!-- Placeholder image for now. User can replace it. -->
+                <div class="avatar-placeholder">
+                    <span>AKC</span>
+                </div>
+                <div class="rank-badge">Gamer & Dev</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .avatar-container {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+        border: 2px solid var(--neon-purple);
+        border-radius: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--card-bg);
+        overflow: hidden;
+    }
+    
+    .avatar-placeholder {
+        font-size: 5rem;
+        font-weight: 800;
+        color: var(--neon-purple);
+        opacity: 0.5;
+    }
+
+    .rank-badge {
+        position: absolute;
+        bottom: 10px;
+        background: var(--neon-purple);
+        color: white;
+        padding: 5px 20px;
+        border-radius: 20px;
+        font-weight: bold;
+        box-shadow: 0 0 15px var(--neon-purple-glow);
+    }
+
+    .skills-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .skill-item {
+        background: rgba(168, 85, 247, 0.1);
+        border: 1px solid var(--neon-purple);
+        color: white;
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-weight: 500;
+    }
+    
+    .border-purple { border-color: var(--neon-purple) !important; }
+    .text-purple { color: var(--neon-purple) !important; }
+</style>
